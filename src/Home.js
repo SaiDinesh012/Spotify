@@ -54,11 +54,12 @@ const Home = () => {
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full p-2 mb-4 rounded bg-[#333] text-white"
         />
+         {filteredSongs.length > 0 && (
         <SongList
           songs={filteredSongs}
           currentSongIndex={currentSongIndex}
           setCurrentSongIndex={setCurrentSongIndex}
-        />
+        />)}
       </div>
       {filteredSongs.length > 0 && (
         <Player
